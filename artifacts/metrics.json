@@ -1,0 +1,46 @@
+{
+  "research_status": "Educational proof of concept, NOT published AdaAD reproduction",
+  "dataset": "sklearn digits / 8x8 grayscale / 1797 images",
+  "seed": 2026,
+  "n_train": 1149,
+  "n_val": 288,
+  "n_test": 360,
+  "evaluation": {
+    "attack": "untargeted white-box L_inf PGD",
+    "epsilon": 0.15,
+    "pgd_steps": 10,
+    "random_start": true
+  },
+  "models": {
+    "teacher": {
+      "clean_accuracy": 0.94722,
+      "pgd_robust_accuracy": 0.55556,
+      "parameters": 17226,
+      "training_seconds": 0.61
+    },
+    "plain": {
+      "clean_accuracy": 0.91944,
+      "pgd_robust_accuracy": 0.1,
+      "parameters": 4546,
+      "training_seconds": 0.17
+    },
+    "kd": {
+      "clean_accuracy": 0.875,
+      "pgd_robust_accuracy": 0.20556,
+      "parameters": 4546,
+      "training_seconds": 0.23
+    },
+    "robust_kd": {
+      "clean_accuracy": 0.90278,
+      "pgd_robust_accuracy": 0.44722,
+      "parameters": 4546,
+      "training_seconds": 0.73
+    },
+    "adv_student": {
+      "clean_accuracy": 0.925,
+      "pgd_robust_accuracy": 0.50278,
+      "parameters": 4546,
+      "training_seconds": 0.52
+    }
+  }
+}
